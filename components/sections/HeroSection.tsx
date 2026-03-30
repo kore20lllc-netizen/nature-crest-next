@@ -2,41 +2,48 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section className="section bg-gradient-to-b from-white to-gray-50">
+      <div className="container grid md:grid-cols-2 gap-16 items-center">
 
         <div>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1>
             Unlocking Africa’s Natural Capital for Global Climate Solutions
           </h1>
 
           <p className="mt-6 text-lg text-gray-600">
             Nature Crest originates, structures, and scales high-integrity carbon
-            and nature-based projects across Africa—transforming climate
-            opportunities into credible, investable assets.
+            and nature-based projects across Africa.
           </p>
 
           <div className="mt-8 flex gap-4">
-            <a href="#contact" className="bg-green-600 text-white px-6 py-3 rounded-lg">
-              Book a Strategy Call
+            <a href="#contact" className="btn-primary flex items-center gap-2">
+              Book a Strategy Call <ArrowRight size={16} />
             </a>
-            <a href="#projects" className="border px-6 py-3 rounded-lg">
+            <a href="#projects" className="btn-outline">
               Explore Projects
             </a>
           </div>
 
-          <div className="mt-10 flex gap-6 text-sm text-gray-500">
-            <span>50+ Projects</span>
-            <span>30+ Countries</span>
-            <span>100M+ tCO₂ Managed</span>
+          <div className="mt-10 flex gap-8 text-sm text-gray-500">
+            <div>
+              <div className="text-xl font-semibold text-black">50+</div>
+              Projects
+            </div>
+            <div>
+              <div className="text-xl font-semibold text-black">30+</div>
+              Countries
+            </div>
+            <div>
+              <div className="text-xl font-semibold text-black">100M+</div>
+              tCO₂
+            </div>
           </div>
         </div>
 
         <div>
           <img
             src="/assets/forest-hero.jpg"
-            alt="Climate Solutions"
-            className="rounded-xl w-full"
+            className="rounded-2xl shadow-lg"
           />
         </div>
 

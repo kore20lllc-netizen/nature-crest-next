@@ -15,16 +15,16 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section className="py-20">
+    <section className="section">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-center mb-16">
           Case Studies
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {cases.map((c, i) => (
-            <div key={i} className="border rounded-xl p-6">
+            <div key={i} className="card">
               <h3 className="font-semibold mb-2">{c.title}</h3>
               <p className="text-sm text-gray-500">{c.desc}</p>
             </div>
