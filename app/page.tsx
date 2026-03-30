@@ -1,18 +1,16 @@
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
+import ImpactBanner from "@/components/sections/ImpactBanner";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import InsightsSection from "@/components/sections/InsightsSection";
 import ContactSection from "@/components/sections/ContactSection";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      <ImpactBanner />
       <ServicesSection />
       <ProjectsSection />
-      <InsightsSection />
       <ContactSection />
     </>
   );

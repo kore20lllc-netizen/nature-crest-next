@@ -1,56 +1,38 @@
-"use client";
-
-import { TreeDeciduous, Landmark, Scale } from "lucide-react";
-
-const services = [
-  {
-    title: "Nature-Based Solutions",
-    description:
-      "Design and implementation of large-scale environmental and carbon projects.",
-    icon: TreeDeciduous,
-  },
-  {
-    title: "Climate Finance",
-    description:
-      "Structuring funding mechanisms and investment-ready climate initiatives.",
-    icon: Landmark,
-  },
-  {
-    title: "Policy & Strategy",
-    description:
-      "Advisory support for governments and institutions on climate frameworks.",
-    icon: Scale,
-  },
-];
-
 export default function ServicesSection() {
+  const services = [
+    {
+      title: "Climate Project Development",
+      desc: "REDD+, ARR, mangroves and regenerative agriculture with full MRV systems.",
+    },
+    {
+      title: "Climate Finance",
+      desc: "Structuring access to GCF, GEF and blended finance mechanisms.",
+    },
+    {
+      title: "Policy & Article 6",
+      desc: "NDC implementation, carbon registries and international carbon markets.",
+    },
+    {
+      title: "Digital & MRV",
+      desc: "Satellite monitoring, geospatial data and real-time dashboards.",
+    },
+  ];
+
   return (
-    <section className="section bg-gray-50">
-      <div className="container">
+    <section id="services" className="py-20">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2>Our Services</h2>
-          <p className="mt-4">
-            We design, finance, and execute scalable climate and nature-based solutions.
-          </p>
-        </div>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          What We Do
+        </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <div key={service.title} className="card text-center">
-                <div className="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-xl flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-green-700" />
-                </div>
-
-                <h3 className="mb-2">{service.title}</h3>
-
-                <p className="text-sm">{service.description}</p>
-              </div>
-            );
-          })}
+        <div className="grid md:grid-cols-4 gap-6">
+          {services.map((s, i) => (
+            <div key={i} className="border rounded-xl p-6">
+              <h3 className="font-semibold mb-2">{s.title}</h3>
+              <p className="text-sm text-gray-500">{s.desc}</p>
+            </div>
+          ))}
         </div>
 
       </div>
