@@ -1,72 +1,32 @@
 export default function InitiativesSection() {
-  const initiatives: {
-    id: string;
-    title: string;
-    tagline: string;
-    description: string;
-    bullets: string[];
-  }[] = [
+  const initiatives = [
     {
-      id: "carbon",
-      title: "Carbon Projects",
-      tagline: "High-integrity carbon development",
-      description:
-        "We originate and structure carbon projects aligned with global standards and local impact.",
-      bullets: [
-        "Afforestation & reforestation",
-        "REDD+ programs",
-        "Carbon certification support",
-      ],
+      title: "AFRICO2 Platform",
+      desc: "A continental platform to scale high-integrity carbon projects across Africa.",
     },
     {
-      id: "finance",
-      title: "Climate Finance",
-      tagline: "Unlocking capital at scale",
-      description:
-        "Designing financial structures that attract institutional and private investment.",
-      bullets: [
-        "Blended finance",
-        "Investor structuring",
-        "Project bankability",
-      ],
+      title: "30M+ Tons Initiative",
+      desc: "A large-scale pipeline targeting millions of tons of verified carbon credits.",
     },
     {
-      id: "execution",
-      title: "Project Execution",
-      tagline: "From design to deployment",
-      description:
-        "End-to-end implementation with local partnerships and measurable outcomes.",
-      bullets: [
-        "Field operations",
-        "Monitoring & reporting",
-        "Community integration",
-      ],
+      title: "CASIF",
+      desc: "Climate Adaptation & Sustainable Investment Facility enabling blended finance for resilience.",
     },
   ];
 
   return (
-    <section id="initiatives" className="section bg-white">
-      <div className="container">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2>Key Initiatives</h2>
-          <p className="mt-4">
-            Scalable climate programs designed for real-world impact.
-          </p>
-        </div>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Global Initiatives
+        </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {initiatives.map((item) => (
-            <div key={item.id} className="card">
-              <h3 className="mb-1">{item.title}</h3>
-              <p className="text-sm text-green-600 mb-3">{item.tagline}</p>
-              <p className="text-sm mb-4">{item.description}</p>
-
-              <ul className="text-sm space-y-1 mb-4">
-                {item.bullets.map((b, i) => (
-                  <li key={i}>• {b}</li>
-                ))}
-              </ul>
+        <div className="grid md:grid-cols-3 gap-6">
+          {initiatives.map((item, i) => (
+            <div key={i} className="border rounded-xl p-6 bg-white">
+              <h3 className="font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-500">{item.desc}</p>
             </div>
           ))}
         </div>
