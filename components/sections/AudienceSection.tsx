@@ -66,11 +66,11 @@ export default function AudienceSection() {
   ];
 
   return (
-    <section className="section bg-white">
-      <div className="container">
+    <section className="py-24 md:py-32 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
 
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2>Who We Work With</h2>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Who We Work With</h2>
           <p className="mt-4">
             Tailored solutions for governments, investors, and organizations.
           </p>

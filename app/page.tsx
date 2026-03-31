@@ -1,21 +1,30 @@
+import CTASection from "@/components/sections/CTASection";
+
+import TrustSection from "@/components/sections/TrustSection";
+import PartnersSection from "@/components/sections/PartnersSection";
+
+import SolutionsSection from "@/components/sections/SolutionsSection";
+import InsightsSection from "@/components/sections/InsightsSection";
+import AboutSection from "@/components/sections/AboutSection";
+
 import HeroSection from "@/components/sections/HeroSection";
-import ImpactBanner from "@/components/sections/ImpactBanner";
 import ServicesSection from "@/components/sections/ServicesSection";
-import InitiativesSection from "@/components/sections/InitiativesSection";
-import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
-import DigitalSection from "@/components/sections/DigitalSection";
-import ContactSection from "@/components/sections/ContactSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 export default function Page() {
   return (
     <>
       <HeroSection />
-      <ImpactBanner />
+<PartnersSection />
+<TrustSection />
+<SolutionsSection />
+<ProjectsSection />
+<CTASection />
+<InsightsSection />
+<AboutSection />
       <ServicesSection />
-      <InitiativesSection />
-      <CaseStudiesSection />
-      <DigitalSection />
-      <ContactSection />
+      <ProjectsSection />
+<CTASection />
     </>
   );
 }

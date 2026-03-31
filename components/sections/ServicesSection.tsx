@@ -19,7 +19,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section">
+    <section id="services" className="py-24 md:py-32 px-6">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-center mb-16">

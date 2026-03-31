@@ -8,7 +8,7 @@ export default function DigitalSection() {
   ];
 
   return (
-    <section className="section bg-gray-50">
+    <section className="py-24 md:py-32 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center max-w-2xl mx-auto mb-12">

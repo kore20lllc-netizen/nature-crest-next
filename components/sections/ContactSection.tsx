@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ContactSection() {
+export default function Start Your ProjectSection() {
   const [form, setForm] = useState({
     name: "",
     organization: "",
@@ -21,19 +21,20 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section bg-gray-50">
-      <div className="container max-w-3xl">
+    <section id="contact" className="py-24 md:py-32 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto max-w-3xl">
 
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-semibold text-gray-900">
-            Contact Us
+            Start Your Project Us
           </h2>
           <p className="mt-3 text-gray-600">
             Let’s discuss your climate or nature-based initiative.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <p className="text-gray-600 mb-6">Provide details about your initiative. Our team will review and respond promptly.</p>
+<form onSubmit={handleSubmit} className="space-y-6">
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div>

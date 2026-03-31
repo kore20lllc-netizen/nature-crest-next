@@ -1,30 +1,30 @@
 export default function TrustSection() {
-  const partnerLogos = [
-    { name: "AIRF", logo: "/assets/partners/airf.png" },
-    { name: "EWOD PGM", logo: "/assets/partners/ewod.png" },
-    { name: "Forest Cover", logo: "/assets/partners/forestcover.png" },
-    { name: "LLD Fampandrosoana Ifotony", logo: "/assets/partners/lld.png" },
+  const stats = [
+    { value: "30M+", label: "Trees Planted" },
+    { value: "50+", label: "Projects Delivered" },
+    { value: "10+", label: "Countries Impacted" },
+    { value: "100K+", label: "Lives Affected" },
   ];
 
   return (
-    <section className="section bg-gray-50">
-      <div className="container">
+    <section className="py-24 md:py-32 bg-green-900 text-white">
+      <div className="max-w-7xl mx-auto px-6 text-center">
 
-        <div className="text-center mb-12">
-          <h2>Trusted Partners</h2>
-          <p className="mt-4">
-            We collaborate with organizations across climate, finance, and conservation.
-          </p>
-        </div>
+        <h2 className="text-4xl md:text-5xl font-bold">
+          Proven Environmental Trusted Impact at Scale Social Impact
+        </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {partnerLogos.map((partner, idx) => (
-            <div key={idx} className="flex justify-center">
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="h-12 object-contain opacity-80 hover:opacity-100 transition"
-              />
+        <p className="mt-4 text-green-100 text-lg max-w-2xl mx-auto">
+          Our initiatives are designed to deliver verified, long-term environmental and socio-economic outcomes at scale.
+        </p>
+
+        <div className="mt-16 grid md:grid-cols-4 gap-10">
+          {stats.map((s, i) => (
+            <div key={i}>
+              <p className="text-4xl md:text-5xl font-bold text-yellow-400">
+                {s.value}
+              </p>
+              <p className="mt-2 text-green-100">{s.label}</p>
             </div>
           ))}
         </div>

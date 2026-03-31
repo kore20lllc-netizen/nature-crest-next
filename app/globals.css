@@ -77,3 +77,14 @@ h3 {
 .btn-outline:hover {
   background: #f9fafb;
 }
+
+.gradient-accent {
+  background: linear-gradient(135deg, #0f3d2e, #1f7a5a);
+  color: white;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  background: linear-gradient(to bottom, #ffffff, #f7faf7);
+}
+

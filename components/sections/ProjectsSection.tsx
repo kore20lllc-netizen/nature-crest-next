@@ -1,111 +1,67 @@
-"use client";
-
-import { MapPin, TreeDeciduous, Bird, ArrowRight } from "lucide-react";
-
-const projects = [
-  {
-    title: "Forest Conservation Initiative",
-    region: "Central Africa",
-    country: "Cameroon",
-    type: "Reforestation",
-    hectares: 12000,
-    carbonValue: "$4.2M",
-    coBenefits: "Biodiversity protection, community jobs",
-    description:
-      "Large-scale reforestation and conservation program designed to generate carbon credits.",
-  },
-  {
-    title: "Mangrove Restoration Program",
-    region: "West Africa",
-    country: "Senegal",
-    type: "Restoration",
-    hectares: 8000,
-    carbonValue: "$2.8M",
-    coBenefits: "Coastal protection, fisheries support",
-    description:
-      "Restoring mangrove ecosystems to enhance carbon sequestration.",
-  },
-  {
-    title: "Agroforestry Expansion",
-    region: "East Africa",
-    country: "Kenya",
-    type: "Agroforestry",
-    hectares: 5000,
-    carbonValue: "$1.6M",
-    coBenefits: "Farmer income, soil health",
-    description:
-      "Integrating trees into agriculture to improve productivity and capture carbon.",
-  },
-];
-
 export default function ProjectsSection() {
-  return (
-    <section id="projects" className="section bg-white">
-      <div className="container">
+  const projects = [
+    {
+      title: "Reforestation Program",
+      location: "Central Africa",
+      image: "/assets/forest-hero.jpg",
+      description: "Large-scale ecosystem restoration improving biodiversity and livelihoods.",
+    },
+    {
+      title: "Community Agroforestry",
+      location: "West Africa",
+      image: "/assets/forest-hero.jpg",
+      description: "Integrating agriculture with forest systems to boost resilience.",
+    },
+    {
+      title: "Carbon Capture Initiative",
+      location: "Global",
+      image: "/assets/forest-hero.jpg",
+      description: "Reducing emissions through verified environmental programs.",
+    },
+  ];
 
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2>Our Projects</h2>
-          <p className="mt-4">
-            Real-world climate initiatives delivering measurable impact.
+  return (
+    <section id="projects" className="py-24 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold">Our Projects</h2>
+          <p className="mt-4 text-gray-600 text-lg">
+            Real-world initiatives delivering measurable environmental impact.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.title} className="card overflow-hidden p-0">
 
-              <div className="relative h-44">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="group rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-xl transition"
+            >
+
+              <div className="overflow-hidden">
                 <img
-                  src="/assets/forest-hero.jpg"
-                  alt={project.title}
-                  className="w-full h-full object-cover"
+                  src={project.image}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
                 />
               </div>
 
               <div className="p-6">
+                <p className="text-sm text-green-700 font-medium">{project.location}</p>
+                <h3 className="text-xl font-semibold mt-2">{project.title}</h3>
+                <p className="text-gray-600 mt-3 text-sm">{project.description}</p>
 
-                <div className="text-xs text-green-600 font-medium mb-1">
-                  {project.type}
-                </div>
-
-                <h3 className="mb-2">{project.title}</h3>
-
-                <p className="text-sm mb-4">{project.description}</p>
-
-                <div className="flex justify-between text-sm text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <TreeDeciduous className="w-4 h-4 text-green-600" />
-                    {project.hectares} ha
-                  </div>
-
-                  <div className="font-semibold text-gray-900">
-                    {project.carbonValue}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-4">
-                  <Bird className="w-4 h-4 text-green-600" />
-                  {project.coBenefits}
-                </div>
-
-                <div className="flex items-center justify-between text-sm">
-                  <span className="flex items-center gap-1 text-gray-500">
-                    <MapPin className="w-4 h-4" />
-                    {project.region}
-                  </span>
-
-                  <a
-                    href="#contact"
-                    className="flex items-center gap-1 text-green-600 hover:text-green-800 font-medium"
-                  >
-                    Details
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-
+                <a
+                  href="#"
+                  className="inline-block mt-4 text-green-700 font-medium hover:underline"
+                >
+                  Learn more →
+                </a>
               </div>
+
             </div>
           ))}
+
         </div>
 
       </div>
